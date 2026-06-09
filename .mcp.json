@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "node-repl": {
+      "command": "node",
+      "args": ["scripts/node-repl-mcp.mjs"]
+    }
+  }
+}
