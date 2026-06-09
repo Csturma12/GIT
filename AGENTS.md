@@ -67,3 +67,14 @@ matcher that skips static assets.
 ## Notes for Claude Code specifically
 
 - `CLAUDE.md` re-exports this file. Edit `AGENTS.md`, not `CLAUDE.md`.
+- **Node REPL MCP server.** This repo ships a project-scoped MCP server
+  (`scripts/node-repl-mcp.mjs`, registered in `.mcp.json`) that gives Claude
+  Code a persistent Node REPL — the equivalent of Codex's bundled `node_repl`
+  tool. It exposes two tools:
+  - `node_eval` — run JavaScript/Node code; variables, declarations, and
+    `require`d modules persist across calls, and top-level `await` works.
+  - `node_reset` — wipe the REPL state and start a fresh context.
+
+  It has zero runtime dependencies (Node built-ins only). Approve the server
+  when Claude Code prompts to enable project MCP servers.
+
