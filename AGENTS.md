@@ -42,6 +42,12 @@ npm run dev
 Wire `middleware.ts` into `middleware.ts` at the project root with a
 matcher that skips static assets.
 
+## MCP servers (in `.mcp.json`)
+
+- `terminal49` — Terminal49 container-tracking MCP server over HTTP
+  (`https://mcp.terminal49.com`). Project-scoped, so both agents pick it
+  up automatically. It may require authenticating on first use.
+
 ## Working agreements between agents
 
 1. **One branch per task.** Don't push to `main` directly. Open a PR.
